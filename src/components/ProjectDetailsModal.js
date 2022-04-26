@@ -12,6 +12,7 @@ class ProjectDetailsModal extends Component {
       var title = this.props.data.title;
       var description = this.props.data.description;
       var url = this.props.data.url;
+      var git = this.props.data.git;
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
           return (
@@ -92,7 +93,19 @@ class ProjectDetailsModal extends Component {
                   ></i>
                 </a>
               ) : null}
+              {git ? (
+                <a
+                  href={git}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-href"
+                  style={{marginLeft:"2%"}}
+                >
+                  <i class="devicon-github-original colored"></i>
+                </a>
+              ) : null}
             </h3>
+
             <p className="modal-description">{description}</p>
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">{tech}</ul>

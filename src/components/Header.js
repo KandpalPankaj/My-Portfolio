@@ -45,7 +45,7 @@ class Header extends Component {
                 <Typical steps={[name]} wrapper="p" />
               </h1>
               <div className="title-container">
-                <HeaderTitleTypeAnimation/>
+                <HeaderTitleTypeAnimation />
               </div>
               <Switch
                 checked={this.state.checked}
