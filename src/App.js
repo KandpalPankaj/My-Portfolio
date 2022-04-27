@@ -7,7 +7,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-// import ScrollableTabsButtonForce from "./components/Navbar";
+
 class App extends Component {
 
   constructor(props) {
