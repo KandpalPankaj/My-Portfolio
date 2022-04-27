@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Icon } from "@iconify/react";
 import javascriptIcon from "@iconify/icons-logos/javascript";
 import reactIcon from "@iconify/icons-logos/react";
-// import fileTypeNode2 from '@iconify/icons-logos/file-type-node2';
 
 class About extends Component {
   render() {
