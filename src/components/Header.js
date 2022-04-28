@@ -29,7 +29,7 @@ class Header extends Component {
       var name = this.props.sharedData.name;
       this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
     }
-
+    
     const HeaderTitleTypeAnimation = React.memo( () => {
       return <Typical className="title-styles" steps={this.titles} loop={50} />
     }, (props, prevProp) => true);
@@ -44,7 +44,7 @@ class Header extends Component {
               <h1 className="mb-0">
                 <Typical steps={[name]} wrapper="p" />
               </h1>
-              <div className="title-container">
+              <div className="title-container" style={{marginBottom:"3%"}}>
                 <HeaderTitleTypeAnimation />
               </div>
               <Switch
@@ -87,7 +87,9 @@ class Header extends Component {
                 }
                 id="icon-switch"
               />
+              
             </div>
+            
           </div>
         </div>
       </header>

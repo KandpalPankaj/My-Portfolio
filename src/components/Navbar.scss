@@ -3,10 +3,17 @@
     background-color: #1f1f1f;
 }
 
-.container>a{
+.container>div>a,.flex>div>a{
     color: white;
-    font-size: 25px;
+    font-size: 22px;
 }
-.container>a:active{
+.container>div>a:active, .flex>div>a:active{
     color: #e9d5a1;
+}
+.container,.flex{
+    display:flex;
+}
+
+.left{
+    flex: 25%;
 }
