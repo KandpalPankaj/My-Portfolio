@@ -160,7 +160,15 @@ header h1 {
 	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 }
-
+#skill:hover {
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+	z-index: 10;
+	-webkit-box-shadow: 0 10px 20px white;
+	-moz-box-shadow: 0 10px 20px white;
+	box-shadow: 0 10px 20px white;
+}
 .project-title-settings {
 	margin-top: 5%;
 	font: 18px/24px 'opensans-bold', sans-serif;

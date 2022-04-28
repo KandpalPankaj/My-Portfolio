@@ -19,6 +19,22 @@ class Projects extends Component {
     if (this.props.resumeProjects && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.projects;
       var projects = this.props.resumeProjects.map(function (projects) {
+
+        var tech = projects.techno.map((icons, i) => {
+          return (
+            <li className="list-inline-item mx-3" key={i}>
+              <span>
+                {/* <div className="text-center"> */}
+                  <i className={icons.class} style={{ fontSize: "300%" }}>
+                    <p className="text-center" style={{ fontSize: "30%" }}>
+                      {icons.name}
+                    </p>
+                  </i>
+                {/* </div> */}
+              </span>
+            </li>
+          );
+        })
         return (
           <div
             className="col-sm-12 col-md-6 col-lg-4"
@@ -32,13 +48,14 @@ class Projects extends Component {
                     src={projects.images[0]}
                     alt="projectImages"
                     height="230"
-                    style={{marginBottom: 0, paddingBottom: 0, position: 'relative'}}
+                    style={{marginBottom: 0, paddingBottom: 0, position: 'relative' , border:"1px solid grey"}}
                   />
                   <span className="project-date">{projects.startDate}</span>
                   <br />
-                  <p className="project-title-settings mt-3">
+                  <p className="project-title-settings mt-3" style={{textDecoration:"underline" , fontWeight:"bold"}}>
                     {projects.title}
                   </p>
+                  <div>{tech}</div>
                 </div>
               </div>
             </span>

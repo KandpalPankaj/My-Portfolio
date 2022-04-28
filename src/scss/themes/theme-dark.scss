@@ -52,7 +52,12 @@ body[data-theme="dark"] {
          color: white;
       }
    }
-
+   #projects{
+      background-color: #7f7f7f;
+   }
+   #projects>div{
+      background-color: #6d6d6d;
+   }
    #portfolio {
       background: #5b5b5b;
       .section-title {
