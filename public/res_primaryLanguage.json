@@ -120,6 +120,46 @@
           "name": "React"
         }
       ]
+    },
+    {
+      "title": "Movie App",
+      "startDate": "2022",
+      "description": "Personal project for study subject. The objective is cloning amazon.in  landing page and improving skills. Working alone was pretty challenging and I made it complete. Main features are slideshow, hovering effect, dropdown on hover etc.",
+      "images": [
+        "https://i.imgur.com/bs9aW9a.png",
+        "https://i.imgur.com/SPipWPJ.png",
+        "https://i.imgur.com/4Hzkq5D.png"
+      ],
+      "url": "https://amazonlandingpage.netlify.app/",
+      "git": "https://github.com/pankajnandi/amazon_landing_page",
+      "technologies": [
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        },
+        {
+          "class": "devicon-css3-plain",
+          "name": "Css3"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ],
+      "techno": [
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        },
+        {
+          "class": "devicon-css3-plain",
+          "name": "Css3"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
     }
   ]
 }

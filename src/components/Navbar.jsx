@@ -33,6 +33,9 @@ const Navbar = () => {
             Contact
           </a>
         </div>
+        <div>
+          <a className="nav-link js-scroll" href="https://drive.google.com/file/d/12b8DF57iKk0VOBokuAnuOsdNiPB_xeuu/view?usp=sharing">Resume</a>
+        </div>
         </div>
       </div>
     </nav>

@@ -17,3 +17,10 @@
 .left{
     flex: 25%;
 }
+
+@media (max-width: 550px){
+    .container>div>a,.flex>div>a{
+        color: white;
+        font-size: 16px;
+    }
+}
