@@ -1,21 +1,95 @@
 import React, { Component } from "react";
 import "./Footer.scss";
-import { Icon } from '@iconify/react';
-import locationIcon from '@iconify/icons-bytesize/location';
-import telephoneIcon from '@iconify/icons-bytesize/telephone';
-import gmailIcon from '@iconify/icons-mdi/gmail';
+import { Icon } from "@iconify/react";
+import locationIcon from "@iconify/icons-bytesize/location";
+import telephoneIcon from "@iconify/icons-bytesize/telephone";
+import gmailIcon from "@iconify/icons-mdi/gmail";
+import * as emailjs from "@emailjs/browser";
+import ClipLoader from "react-spinners/BarLoader";
+import { Button, Modal, Image } from "react-bootstrap";
 
 class Footer extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.state = {
+      show: false,
+      loading: false,
+    };
+  }
+
+  handleClose() {
+    this.setState({ show: false });
+    this.setState({ name: "" });
+    this.resetForm();
+  }
+
+  handleShow() {
+    this.setState({ show: true, loading: false });
+  }
+
+  state = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    show: false,
+  };
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.setState({ loading: true });
+
+    const { email, subject, message } = this.state;
+
+    let templateParams = {
+      from_name: `${this.state.name} - ${email}`,
+      to_name: "Pankaj Kandpal",
+      subject: subject,
+      message: message,
+    };
+    emailjs
+      .send(
+        "service_kardf7s",
+        "template_guvlq18",
+        templateParams,
+        "lowl81d6CpQmUrQF5"
+      )
+      .then(
+        (result) => {
+          this.handleShow();
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
+  resetForm() {
+    this.setState({
+      email: "",
+      subject: "",
+      message: "",
+      modal: false,
+    });
+  }
+
+  handleChange = (param, e) => {
+    this.setState({ [param]: e.target.value });
+  };
+
   render() {
     if (this.props.sharedBasicInfo) {
       var networks = this.props.sharedBasicInfo.social.map(function (network) {
         return (
           <span className="so">
-          <span key={network.name} className="m-4">
-            <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <i className={network.class}></i>
-            </a>
-          </span>
+            <span key={network.name} className="m-4">
+              <a href={network.url} target="_blank" rel="noopener noreferrer">
+                <i className={network.class}></i>
+              </a>
+            </span>
           </span>
         );
       });
@@ -39,14 +113,11 @@ class Footer extends Component {
                           </div>
                           <div>
                             <form
-                              action="https://formspree.io/xdoeonlo"
-                              method="POST"
+                             
                               className="contactForm"
+                              onSubmit={this.handleSubmit.bind(this)}
                             >
-                              {/* <div id="sendmessage">
-                                Your message has been sent. Thank you!
-                              </div> */}
-                              {/* <div id="errormessage"></div> */}
+                              
                               <div className="row">
                                 <div className="col-md-12 mb-3">
                                   <div className="form-group">
@@ -58,6 +129,11 @@ class Footer extends Component {
                                       placeholder="Your Name"
                                       data-rule="minlen:4"
                                       data-msg="Please enter at least 4 chars"
+                                      value={this.state.name}
+                                      onChange={this.handleChange.bind(
+                                        this,
+                                        "name"
+                                      )}
                                     />
                                     <div className="validation"></div>
                                   </div>
@@ -72,6 +148,11 @@ class Footer extends Component {
                                       placeholder="Your Email"
                                       data-rule="email"
                                       data-msg="Please enter a valid email"
+                                      value={this.state.email}
+                                      onChange={this.handleChange.bind(
+                                        this,
+                                        "email"
+                                      )}
                                     />
                                     <div className="validation"></div>
                                   </div>
@@ -86,6 +167,11 @@ class Footer extends Component {
                                       placeholder="Subject"
                                       data-rule="minlen:4"
                                       data-msg="Please enter at least 8 chars of subject"
+                                      value={this.state.subject}
+                                      onChange={this.handleChange.bind(
+                                        this,
+                                        "subject"
+                                      )}
                                     />
                                     <div className="validation"></div>
                                   </div>
@@ -100,17 +186,61 @@ class Footer extends Component {
                                       data-rule="required"
                                       data-msg="Please write something for us"
                                       placeholder="Message"
+                                      value={this.state.message}
+                                      onChange={this.handleChange.bind(
+                                        this,
+                                        "message"
+                                      )}
                                     ></textarea>
-                                    <div className="validation"></div>
+                                    <div className="validation"> </div>
                                   </div>
                                 </div>
                                 <div className="col-md-12">
                                   <button
                                     type="submit"
-                                    className="button button-a button-big button-rouded"
+                                    className="button button-a button-big button-rounded"
                                   >
                                     Send Message
+                                    <ClipLoader
+                                      size={5} // or 150px
+                                      color={"#ffffff"}
+                                      loading={this.state.loading}
+                                    />
                                   </button>
+                                  <Modal
+                                    size="md"
+                                    aria-labelledby="contained-modal-title-vcenter"
+                                    show={this.state.show}
+                                    onHide={this.handleClose}
+                                    centered
+                                  >
+                                    <Modal.Body className="contact_success_modal_body">
+                                      <Image
+                                        className="contact_success_modal_img"
+                                        src="https://icon-library.net/images/success-icon/success-icon-5.jpg"
+                                        style={{width:"15%"}}
+                                      />
+                                      <h4>
+                                        Thank you{" "}
+                                        <span>
+                                          <strong>{this.state.name}</strong>!!
+                                        </span>{" "}
+                                        😇
+                                      </h4>
+                                      <h5>
+                                      You have successfully registered your message. We will get in touch with you shortly.
+                                      </h5>
+                                      <br />
+                                      <Button
+                                        variant="outline-light"
+                                        size="lg"
+                                        onClick={this.handleClose}
+                                        className="contact-email-text-btn"
+                                      >
+                                        Close
+                                      </Button>
+                                    </Modal.Body>
+                                  </Modal>
                                 </div>
                               </div>
                             </form>
@@ -122,7 +252,7 @@ class Footer extends Component {
                             <div className="underline"></div>
                           </div>
                           <div className="more-info">
-                            <p id="lead" >
+                            <p id="lead">
                               Whether you want to get in touch, talk about a
                               project collaboration, or just say hi, I'd love to
                               hear from you.
@@ -131,13 +261,18 @@ class Footer extends Component {
                             </p>
                             <div className="social-links">{networks}</div>
                             <div className="address">
-                              
-                                <div><Icon icon={locationIcon} />53 Jogyura Thal Pithoragarh, Uttarakhand, 262652</div>
-                                <div><Icon icon={telephoneIcon}/> +91-8393991084</div>
-                                <div><Icon icon={gmailIcon} /> pkandpal28@gmail.com</div>
-                                </div>
+                              <div>
+                                <Icon icon={locationIcon} />
+                                53 Jogyura Thal Pithoragarh, Uttarakhand, 262652
+                              </div>
+                              <div>
+                                <Icon icon={telephoneIcon} /> +91-8393991084
+                              </div>
+                              <div>
+                                <Icon icon={gmailIcon} /> pkandpal28@gmail.com
+                              </div>
+                            </div>
                           </div>
-                          
                         </div>
                       </div>
                     </div>
@@ -148,7 +283,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="copyright py-4 text-center">
-          <div className="container" style={{ width:"13%"}}>
+          <div className="container" style={{ width: "13%" }}>
             <small>
               Copyright &copy;{" "}
               {this.props.sharedBasicInfo
