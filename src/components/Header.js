@@ -44,7 +44,7 @@ class Header extends Component {
               <h1 className="mb-0">
                 <Typical steps={[name]} wrapper="p" />
               </h1>
-              <div className="title-container" style={{marginBottom:"3%"}}>
+              <div className="title-container" style={{marginBottom:"2%" , fontSize:"150%"}}>
                 <HeaderTitleTypeAnimation />
               </div>
               <Switch
