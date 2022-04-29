@@ -5,9 +5,11 @@ const Navbar = () => {
     <nav className="fixed-top" id="mainNav">
       <div className="container">
         <div className="left">
+          <div style={{width: "13%", height:"100%"}}>
           <a className="nav-link js-scroll active" href="#home">
             Home
           </a>
+          </div>
         </div>
         <div className="flex">
         <div>
