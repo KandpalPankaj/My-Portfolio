@@ -20,8 +20,10 @@
 }
 
 @media (max-width: 550px){
-    .container>div>a,.flex>div>a{
-        color: white;
-        font-size: 16px;
+    .container>div>div>a,.flex>div>a{
+        font-size: 14px;
+    }
+    .left{
+        flex: 8%;
     }
 }
