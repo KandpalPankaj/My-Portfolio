@@ -6,7 +6,7 @@
     text-align: left;
 }
 .underline{
-    border: 2px solid #e9d5a1;
+    border: 2px solid khaki;
     width: 18%;
     margin-bottom:7%;
 }
@@ -27,4 +27,18 @@
     text-align: left;
     margin-top: 15%;
 
+}
+.button{
+    width: 150px;
+    height: 50px;
+    background-color: khaki;
+    font-weight: bold;
+    font-family:monospace, Times, serif;
+}
+.button:active{
+    background-color: rgb(238, 216, 20);
+}
+i:hover{
+    font-size: 30px;
+    color: khaki;
 }
