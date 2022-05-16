@@ -217,7 +217,7 @@ class Footer extends Component {
                                     <Modal.Body className="contact_success_modal_body">
                                       <Image
                                         className="contact_success_modal_img"
-                                        src="https://icon-library.net/images/success-icon/success-icon-5.jpg"
+                                        src="https://www.clipartmax.com/png/small/301-3011315_icon-check-green-tick-transparent-background.png"
                                         style={{width:"15%"}}
                                       />
                                       <h4>
@@ -232,7 +232,7 @@ class Footer extends Component {
                                       </h5>
                                       <br />
                                       <Button
-                                        variant="outline-light"
+                                        variant="outline-dark"
                                         size="lg"
                                         onClick={this.handleClose}
                                         className="contact-email-text-btn"

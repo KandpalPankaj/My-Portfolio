@@ -1,6 +1,5 @@
 import React from "react";
 import "./Navbar.scss";
-import { useState } from "react";
 const Navbar = () => {
   return (
     <nav className="fixed-top" id="mainNav">

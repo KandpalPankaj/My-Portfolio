@@ -58,6 +58,54 @@
       ]
     },
     {
+      "title": "Nykaa.com-clone",
+      "startDate": "2022",
+      "description": "The clone is built using the MERN stack; named so since the four key technologies that make up the stack are MongoDB, Express, React, and Node.Using Redux for global state management, making API calls to the server side, and passing components states as props where required was a little hard to keep up with during the sprint. It was challenging to build the clone having learnt the concepts only weeks ago. The successful implementation gave us the confidence we needed in ourselves and React is now another feather in our caps.",
+      "images": [
+        "https://miro.medium.com/max/1400/1*WZHrn7dNf4zcY6gnPrmLhQ.jpeg",
+        "https://miro.medium.com/max/1400/1*De8qh0-gyVb-c2GwHFHEtA.jpeg",
+        "https://miro.medium.com/max/1400/1*v6A0IaCAjERDiTyQx13EMg.jpeg"
+      ],
+      "url": "https://nykaareact.netlify.app/",
+      "git": "https://github.com/pankajnandi/Nykaa.com",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        },
+        {
+          "class": "devicon-redux-plain",
+          "name": "Redux"
+        },
+        {
+          "class": "devicon-nodejs-plain",
+          "name": "Nodejs"
+        },
+        {
+          "class": "devicon-mongodb-plain",
+          "name": "Mongodb"
+        }
+      ],
+      "techno": [
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        },
+        {
+          "class": "devicon-redux-plain",
+          "name": "Redux"
+        },
+        {
+          "class": "devicon-nodejs-plain",
+          "name": "Nodejs"
+        },
+        {
+          "class": "devicon-mongodb-plain",
+          "name": "Mongodb"
+        }
+      ]
+    },
+    {
       "title": "Amazon landing page",
       "startDate": "2022",
       "description": "Personal project for study subject. The objective is cloning amazon.in  landing page and improving skills. Working alone was pretty challenging and I made it complete. Main features are slideshow, hovering effect, dropdown on hover etc.",
@@ -132,6 +180,70 @@
       ],
       "url": "https://pkmoviesmania.netlify.app",
       "git": "https://github.com/pankajnandi/MovieApp",
+      "technologies": [
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        },
+        {
+          "class": "devicon-css3-plain",
+          "name": "Css3"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ],
+      "techno": [
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        },
+        {
+          "class": "devicon-css3-plain",
+          "name": "Css3"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+    },
+    {
+      "title": "Quotes Generator",
+      "startDate": "2022",
+      "description": "This is a very small project created with the purpose of learning the fundamentals of React.js starting from a simple Create React App.",
+      "images": [
+        "https://i.imgur.com/fNn5qRA.png",
+        "https://i.imgur.com/HOCSoJ1.png"
+      ],
+      "url": "https://pkquotes.netlify.app",
+      "git": "https://github.com/pankajnandi/QuoteApp",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        }
+      ],
+      "techno": [
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        }
+      ]
+    },
+    {
+      "title": "coschedule.com-clone",
+      "startDate": "2022",
+      "description": "This is the first time for us to work on a project remotely with a team.We faced some challenges during completion of this project. But after crossing each and every huddle we have finally completed the cloning of the CoSchedule website with our basic knowledge of html, css and js.",
+      "images": [
+        "https://i.imgur.com/ZzhwOFj.png",
+        "https://i.imgur.com/DUAl3Sz.png",
+        "https://i.imgur.com/ASIQ6KJ.png",
+        "https://i.imgur.com/RJQBBvg.png"
+      ],
+      "url": "https://coschedule.netlify.app/",
+      "git": "https://github.com/pankajnandi/CoSchedule.com-Clone",
       "technologies": [
         {
           "class": "devicon-html5-plain",
