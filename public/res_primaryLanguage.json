@@ -306,8 +306,8 @@
         "https://i.imgur.com/g7njS5U.png",
         "https://i.imgur.com/obFzMHX.png"
       ],
-      "url": "https://coschedule.netlify.app/",
-      "git": "https://github.com/pankajnandi/CoSchedule.com-Clone",
+      "url": "https://pkweatherinfo.netlify.app/",
+      "git": "https://github.com/pankajnandi/Weather-app",
       "technologies": [
         {
           "class": "devicon-html5-plain",
