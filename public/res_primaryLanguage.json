@@ -146,6 +146,30 @@
       ]
     },
     {
+      "title": "Todo App",
+      "startDate": "2022",
+      "description": "Todo list app build on react using material ui and json server crud, here backend api is hosted on heroku and frontend is hosted on netlify, In this mini project you will see an amazing design with pagination and animation on delete.",
+      "images": [
+        "https://i.imgur.com/pA6GRCG.png",
+        "https://i.imgur.com/J5dJWf8.png",
+        "https://i.imgur.com/xfA40Ah.png"
+      ],
+      "url": "https://pktodoapp.netlify.app/",
+      "git": "https://github.com/pankajnandi/Todo-App",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        }
+      ],
+      "techno": [
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        }
+      ]
+    },
+    {
       "title": "Stop Watch & Timer",
       "startDate": "2022",
       "description": "Stopwatch and Timer - Presented here new, free app which will help you to measure the time of any situation!. This was also my first project in React library. I've learned a lot!",
@@ -241,6 +265,46 @@
         "https://i.imgur.com/DUAl3Sz.png",
         "https://i.imgur.com/ASIQ6KJ.png",
         "https://i.imgur.com/RJQBBvg.png"
+      ],
+      "url": "https://coschedule.netlify.app/",
+      "git": "https://github.com/pankajnandi/CoSchedule.com-Clone",
+      "technologies": [
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        },
+        {
+          "class": "devicon-css3-plain",
+          "name": "Css3"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ],
+      "techno": [
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        },
+        {
+          "class": "devicon-css3-plain",
+          "name": "Css3"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+    },
+    {
+      "title": "Weather App",
+      "startDate": "2022",
+      "description": "A mini/solo project in which that detect weather of giving location using weather api, in this i user component based js, sweet-alert library and css animation",
+      "images": [
+        "https://i.imgur.com/BxM7QK6.png",
+        "https://i.imgur.com/g7njS5U.png",
+        "https://i.imgur.com/obFzMHX.png"
       ],
       "url": "https://coschedule.netlify.app/",
       "git": "https://github.com/pankajnandi/CoSchedule.com-Clone",
