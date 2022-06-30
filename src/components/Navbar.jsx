@@ -36,7 +36,7 @@ const Navbar = () => {
           </a>
         </div>
         <div>
-          <a className="nav-link js-scroll" href="https://drive.google.com/file/d/12b8DF57iKk0VOBokuAnuOsdNiPB_xeuu/view?usp=sharing">Resume</a>
+          <a className="nav-link js-scroll" href="https://drive.google.com/file/d/13XxXth3xQ1CiSanp5fOPJEldiCxzZi_E/view?usp=sharing">Resume</a>
         </div>
         </div>
       </div>
